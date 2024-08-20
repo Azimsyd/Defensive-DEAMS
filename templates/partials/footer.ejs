@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        /* FOOTER SECTION */
+#FooterSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 5px;
+
+    border: 2px solid black;
+    padding: 10px 10px;
+    background-color: black;
+
+    /* box-shadow: 0px 1px 5px 1px; */
+}
+
+.footer {
+    /* padding: 10px 10px; */
+    color: white;
+    font-size: small;
+}
+
+#FooterSection #SocialLinks {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-flow: row;
+    gap: 12px;
+}
+
+
+#FooterSection .more {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#FooterSection .more img {
+    /* border: 2px solid wheat; */
+    width: 30px;
+    height: 30px;
+    filter: invert();
+}
+        /* @media only screen and (max-width:1000px) and (min-width:700px){
+    footer{
+        font-size: 20px;
+    }
+    footer  .foot{
+        
+        font-size: 20px;
+        padding: 0px 0px;
+    }
+    
+}
+ */
+ @media only screen and (max-width:700px) and (min-width:0px){
+    footer{
+        font-size: 10px;
+    }
+    footer  .foot{
+        font-size: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <footer id="FooterSection">
+        <div class="footer">
+          <h1>Contact me</h1>
+        </div>
+  
+        <div id="SocialLinks">
+          <din class="more">
+            <a href="https://www.linkedin.com/in/azimsyd/">
+              <img src="../../public/img/linkedin.png" alt="linkedin">
+            </a>
+          </din>
+          <din class="more">
+            <a href="https://github.com/Azimsyd">
+              <img src="../../public/img/github.png" alt="github">
+            </a>
+          </din>
+          <din class="more">
+            <a href="https://www.instagram.com/royal.az_?igsh=bXd2a3V1amNyOWh0">
+              <img src="../../public/img/instagram.png" alt="instagram">
+            </a>
+          </din>
+        </div>
+        <div id="bg" class="footer">Devloped By Sayyad Azim © 2024</div>
+      </footer>
+</body>
+</html>

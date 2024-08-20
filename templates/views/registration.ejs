@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      #Registeration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        /* margin: 55px 10px; */
+        background-color: gainsboro;
+        border: 2px solid black;
+        gap: 10px;
+        padding: 70px 0px;
+      }
+      /* #registeration > div{
+            display :flex;
+            justify-content :center;
+            align-items :center;
+            flex-flow :column wrap;
+            border :2px solid black;
+            gap :10px;
+        } */
+      #Registeration form {
+        border: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        gap: 10px;
+        padding: 20px 20px;
+      }
+      #Registeration form input {
+        width: 500px;
+        height: 30px;
+        color: blue;
+      }
+      #Registeration form > div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: column;
+      }
+      #Registeration form .btn {
+        padding: 5px 5px;
+        border-radius: 4px;
+      }
+      .formerror {
+        color: red;
+      }
+      form label {
+        font-style: bold;
+      }
+      @media only screen and (max-width: 1000px) and (min-width: 700px) {
+        #Registeration {
+          background-color: red;
+        }
+      }
+      @media only screen and (max-width: 700px) and (min-width: 500px) {
+        #Registeration {
+          background-color: blue;
+          font-size: 20px;
+        }
+        #Registeration form input {
+          width: 300px;
+          height: 20px;
+          color: blue;
+        }
+      }
+      @media only screen and (max-width: 500px) and (min-width: 0px) {
+        #Registeration {
+          background-color: blue;
+          font-size: 10px;
+        }
+        #Registeration h1 {
+          text-align: center;
+        }
+        #Registeration form input {
+          width: 150px;
+          height: 15px;
+          color: blue;
+        }
+        #Registeration form .btn {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <%- include ('../partials/navbar') %>
+    <section id="Registeration">
+      <h1>Welcome to The Registeration</h1>
+      <form
+        action="/registration"
+        name="myform"
+        onsubmit="return validationform()"
+        method="post"
+      >
+        <div class="formdesign" id="name">
+          <label for="">Name:</label>
+          <input type="text" name="fname" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <div class="formdesign" id="email">
+          <label for="">Email:</label>
+          <input type="email" name="femail" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <div class="formdesign" id="phone">
+          <label for="">Phone:</label>
+          <input type="phone" name="fphone" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <div class="formdesign" id="pass">
+          <label for="">Password:</label>
+          <input type="password" name="fpass" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <div class="formdesign" id="cpass">
+          <label for="">Confirm Password:</label>
+          <input type="password" name="fcpass" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <input class="but" type="submit" value="Registeration" />
+      </form>
+    </section>
+    <%- include ('../partials/footer') %>
+  </body>
+  <script>
+    function clearError() {
+      error = document.getElementsByClassName("formerror");
+      for (const item of error) {
+        item.innerHTML = "";
+      }
+    }
+    function seterror(id, error) {
+      element = document.getElementById(id);
+      element.getElementsByClassName("formerror")[0].innerHTML = error;
+    }
+    function validationform() {
+      var returnval = true;
+      clearError();
+
+      var name = document.forms["myform"]["fname"].value;
+      if (name.length < 5) {
+        seterror("name", " name lemgth is to short");
+        returnval = false;
+      }
+
+      var email = document.forms["myform"]["femail"].value;
+      if (email.length > 25) {
+        seterror("email", "Email lemgth is to short");
+        returnval = false;
+      }
+
+      var phone = document.forms["myform"]["fphone"].value;
+      if (phone.length != 10) {
+        seterror("phone", "Phone length should be 10 Digit");
+        returnval = false;
+      }
+
+      var password = document.forms["myform"]["fpass"].value;
+      if (password.length != 8) {
+        seterror("pass", "password length should be 8 Digit");
+        returnval = false;
+      }
+
+      // var cpassword = document.forms["myform"]["fcpass"].value;
+      // if (cpassword != password) {
+      //   seterror("cpass", "password not match");
+      //   returnval = false;
+      // }
+
+      return returnval;
+    }
+  </script>
+</html>

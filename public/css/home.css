@@ -1,0 +1,71 @@
+
+#HomeSection
+{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-flow: row wrap;
+    /* gap: 20px; */
+    /* background-color: tomato; */
+    padding: 10px 10px;
+    color: black;
+    height: 609px;
+    background: url(../../public/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#HomeSection .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    padding: 200px 0px;
+}
+
+@media only screen and (max-width:1000px) and (min-width:700px){
+    #HomeSection{
+        background: none;
+        background-color: aqua;
+        height: 80vh;
+    }
+    #HomeSection  .box{
+        /* background-color: red; */
+        font-size: 20px;
+        padding: 0px 0px;
+    }
+    #HomeSection .box img{
+        width: 150px;
+    }
+    
+}
+@media only screen and (max-width:700px) and (min-width:0px){
+    #HomeSection{
+        background: none;
+        background-color: aqua;
+        height: 70vh;
+    }
+    #HomeSection  .box{
+        /* background-color: red; */
+        font-size: 10px;
+        padding: 0px 0px;
+    }
+    #HomeSection .box img{
+        width: 80px;
+    }
+}
+
+/* #HomeSection .box h2 {
+    color: white;
+    padding: 10px 0px;
+    font-size: 3em;
+    background: url(../img/pro1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: transparent;
+    background-clip: text;
+} */

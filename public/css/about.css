@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+#AboutSection
+{
+    color: white;
+    font-size: larger;
+    background-color: tomato;
+    
+}
+.container{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row nowrap;
+    /* padding: 20px 20px; */
+    margin-top: 10px;
+    padding: 0px 110px;
+    gap: 20px;
+}
+
+.container .parra{
+    /* border: 2px solid black; */
+    /* width: 800px; */
+    /* height: 1000px; */
+    margin-bottom: 10px;
+    text-indent: 15px;
+    text-wrap: wrap;
+}
+.container .parra p{
+    padding: 0px 20px;
+}
+.container .move1{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px 10px;
+}
+.container .move2{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container .move3{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container .move4{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container .move5{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container .move6{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container .move7{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 400px;
+    align-content: center;
+    background: url(../../public/img/d7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#AboutSection .box {
+    padding: 40px 150px;
+    text-wrap: wrap;
+}
+@media only screen and (max-width:1000px) and (min-width:700px){
+    #AboutSection{
+        background-color: red;
+    }
+    .container .move1, .move2 ,.move3, .move4, .move5, .move6, .move7{
+        order: 2;
+    }
+    .container .parra{
+        order: 1;
+    }
+    
+}
+@media only screen and (max-width:700px) and (min-width:200px){
+    #AboutSection{
+        background-color: blue;
+        font-size: medium;
+    }
+    .container .move1{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .move2{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .move3{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .move4{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .move5{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .move6{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .move7{
+        order: 2;
+        margin: 0px 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .container .parra{
+        order: 1;
+        margin: 0px;
+    }
+    .container{
+        flex-wrap: wrap;
+        padding: 5px 10px;
+    }
+    #AboutSection .box{
+        padding: 20px 28px;
+    }
+    
+}

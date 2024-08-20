@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      #loginSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        /* margin: 55px 10px; */
+        background-color: gainsboro;
+        border: 2px solid black;
+        gap: 10px;
+        padding: 125px 0px;
+      }
+      /* #loginSection > div{
+            display :flex;
+            justify-content :center;
+            align-items :center;
+            flex-flow :column wrap;
+            border :2px solid black;
+            gap :10px;
+        } */
+      #loginSection form {
+        border: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        gap: 10px;
+        padding: 20px 20px;
+      }
+      #loginSection form input {
+        width: 500px;
+        height: 30px;
+        color: blue;
+      }
+      #loginSection form > div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: column;
+      }
+      #loginSection form .btn {
+        padding: 5px 5px;
+        border-radius: 4px;
+      }
+      .formerror {
+        color: red;
+      }
+      form label {
+        font-style: bold;
+      }
+      @media only screen and (max-width: 1000px) and (min-width: 700px) {
+        #loginSection {
+          background-color: red;
+        }
+      }
+      @media only screen and (max-width: 700px) and (min-width: 500px) {
+        #loginSection {
+          background-color: blue;
+          font-size: 20px;
+        }
+        #loginSection form input {
+          width: 300px;
+          height: 20px;
+          color: blue;
+        }
+      }
+      @media only screen and (max-width: 500px) and (min-width: 0px) {
+        #loginSection {
+          background-color: blue;
+          font-size: 10px;
+        }
+        #loginSection h1 {
+          text-align: center;
+        }
+        #loginSection form input {
+          width: 150px;
+          height: 15px;
+          color: blue;
+        }
+        #loginSection form .btn {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <%- include ('../partials/navbar') %>
+    <section id="loginSection">
+      <h1>Login</h1>
+      <form
+        action="/login"
+        method="post"
+      >
+        <div class="formdesign" id="email">
+          <label for="">Email:</label>
+          <input type="email" name="lemail" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <!-- <div class="formdesign" id="phone">
+          <label for="">Phone:</label>
+          <input type="phone" name="phone" required /><span
+            class="formerror"
+          ></span>
+        </div> -->
+
+        <div class="formdesign" id="pass">
+          <label for="">Password:</label>
+          <input type="password" name="password" required /><span
+            class="formerror"
+          ></span>
+        </div>
+
+        <input class="but" type="submit" value="login" />
+      </form>
+    </section>
+    <%- include ('../partials/footer') %>
+  </body>
+  <!-- <script>
+    function clearError() {
+      error = document.getElementsByClassName("formerror");
+      for (const item of error) {
+        item.innerHTML = "";
+      }
+    }
+    function seterror(id, error) {
+      element = document.getElementById(id);
+      element.getElementsByClassName("formerror")[0].innerHTML = error;
+    }
+    function validationform() {
+      var returnval = true;
+      clearError();
+
+      return returnval;
+    }
+  </script> -->
+</html>
